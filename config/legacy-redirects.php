@@ -1,0 +1,26 @@
+<?php
+
+return [
+    'about-mak-digital-arena' => '/about', 'about-us' => '/about',
+    'contact-digital-marketing-agency' => '/contact',
+    'digital-marketing-jobs-in-indore' => '/careers', 'career' => '/careers',
+    'digital-marketing-trends' => '/insights', 'blog' => '/insights',
+    'portfolios' => '/work', 'our-services' => '/services',
+    'digital-marketing-services' => '/services', 'digital-marketing-support' => '/contact',
+    'digital-marketing-faqs' => '/services#questions', 'site-map' => '/sitemap.xml',
+    'brand-building-agency' => '/insights/brand-building-agency', 'ppc-services' => '/insights/ppc-services',
+    'app-development-company-in-indore' => '/services/web-and-app-development',
+    'services/web-development-company-in-indore' => '/services/web-and-app-development',
+    'services/web-development' => '/services/web-and-app-development',
+    'services/web-development-services-mak-digital-arena' => '/services/web-and-app-development',
+    'services/ecommerce-solutions' => '/services/web-and-app-development',
+    'services/seo-services-in-indore' => '/services/seo-and-content',
+    'services/search-engine-optimization' => '/services/seo-and-content',
+    'services/best-seo-company' => '/services/seo-and-content',
+    'services/content-marketing' => '/services/seo-and-content',
+    'services/pay-per-click-ppc' => '/services/digital-marketing',
+    'services/social-media-marketing' => '/services/digital-marketing',
+    'services/digital-marketing-agency' => '/services/digital-marketing',
+    'services/business-consultation' => '/services/business-consulting',
+    'services/business-consulting-services' => '/services/business-consulting',
+];

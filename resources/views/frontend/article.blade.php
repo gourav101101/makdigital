@@ -1,0 +1,6 @@
+@extends('layouts.site')
+@section('title', $article->title.' — MAK Digital Arena')
+@section('description', $article->summary ?? '')
+@section('content')
+<article><header class="detail-hero container"><a class="text-link" href="{{ route('insights.index') }}">← All insights</a><span class="eyebrow">{{ $article->category }} / MAK Digital Arena</span><h1>{{ $article->title }}</h1><p>{{ $article->summary }}</p><span class="article-date">Updated {{ $article->updated_at->format('j F Y') }} · {{ max(1, (int) ceil(str_word_count($article->body) / 200)) }} min read</span></header><div class="reading-layout container"><aside><span class="eyebrow">Keep the conversation going</span><a href="{{ route('contact') }}">Talk to MAK <x-icon /></a></aside><div class="reading-content">@if($article->image_path)<img src="{{ $article->imageUrl() }}" alt="{{ $article->image_alt }}" width="1000" height="667">@endif @foreach(preg_split('/\n\s*\n/', $article->body ?? '') as $paragraph)<p>{{ $paragraph }}</p>@endforeach</div></div></article><section class="container detail-cta"><h2>Turn a thought<br>into a next step.</h2><a class="button button-dark" href="{{ route('contact') }}">Let’s talk <span class="button-icon"><x-icon /></span></a></section>
+@endsection

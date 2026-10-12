@@ -1,0 +1,8 @@
+@extends('layouts.site')
+@section('title', $page->title.' — MAK Digital Arena')
+@section('description', $page->summary ?? '')
+@section('content')
+<section class="detail-hero container"><span class="eyebrow">MAK Digital Arena / {{ str_replace('-', ' ', $page->slug) }}</span><h1>{{ $page->title }}</h1><p>{{ $page->summary }}</p></section>
+<section class="container reading-layout"><aside><span class="eyebrow">Let’s connect</span><a href="{{ route('contact') }}">Contact MAK <x-icon /></a></aside><div class="reading-content {{ str_contains($page->slug, 'policy') || str_contains($page->slug, 'terms') ? 'legal-copy' : '' }}">@foreach(preg_split('/\n\s*\n/', $page->body ?? '') as $paragraph)<p>{{ $paragraph }}</p>@endforeach @if($page->slug === 'careers')<a class="button button-dark" href="mailto:{{ app(App\Services\SiteContent::class)->settings()['email'] }}?subject=Working%20with%20MAK">Introduce yourself <span class="button-icon"><x-icon /></span></a>@endif</div></section>
+@if($page->slug === 'about')<section class="about-section section-space"><div class="container"><span class="eyebrow section-label">What matters to us</span><h2 class="values-title">Good thinking.<br>Thoughtful execution.</h2><div class="value-grid">@foreach(['Integrity' => 'Clear, honest communication and responsibility for our work.', 'Commitment' => 'Care for your business objectives and the details that matter.', 'Innovation' => 'Curiosity about new ideas and practical ways to improve.', 'Quality' => 'An experience shaped around the people who will use it.'] as $title => $description)<div><h3>{{ $title }}</h3><p>{{ $description }}</p></div>@endforeach</div></div></section>@endif
+@endsection
